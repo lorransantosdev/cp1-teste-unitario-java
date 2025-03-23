@@ -11,11 +11,8 @@ public interface ValueFormatterRepository {
 
     public char getSeparatorTypeFromUser();
 
-
+    public List<Double> getDecimalValuesFromUser(int amount);
 
     public void formatAndPrintValues(List<Double> values, char separatorType, Locale locale);
 
-    interface Decimal {
-        public List<Double> getDecimalValuesFromUser(int amount);
-    }
 }

@@ -52,4 +52,5 @@ public class ValueFormatterService {
         }
         return separatorType;
     }
+
 }

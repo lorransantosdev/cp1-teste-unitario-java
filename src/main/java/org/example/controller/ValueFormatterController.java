@@ -18,4 +18,5 @@ public class ValueFormatterController {
             throw new InvalidFormatException("Nenhum valor foi formatada");
         }
     }
+
 }
