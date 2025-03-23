@@ -2,14 +2,13 @@ package org.example.repository.impl;
 
 import org.example.exception.InvalidInputException;
 import org.example.repository.ValueFormatterRepository;
-import org.example.repository.ValueFormatterRepository.Decimal;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.*;
 import java.util.Scanner;
 
-public class ValueFormatterImpl implements ValueFormatterRepository, ValueFormatterRepository.Decimal {
+public class ValueFormatterImpl implements ValueFormatterRepository {
     private final Scanner scanner = new Scanner(System.in);
 
 
@@ -108,4 +107,5 @@ public class ValueFormatterImpl implements ValueFormatterRepository, ValueFormat
             System.out.println("Valor Formatado: " + formatter.format(value));
         }
     }
+
 }

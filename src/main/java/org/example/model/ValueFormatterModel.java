@@ -18,4 +18,5 @@ public class ValueFormatterModel {
     public int getDecimalPlaces() { return decimalPlaces; }
     public char getSeparatorType() { return separatorType; }
     public Locale getTypeSymbols() { return typeSymbols; }
+
 }
