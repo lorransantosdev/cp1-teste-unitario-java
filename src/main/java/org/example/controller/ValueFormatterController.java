@@ -15,7 +15,7 @@ public class ValueFormatterController {
         if ((amountFormatDecimal > 0)) {
             System.out.println("Foram formatados " + amountFormatDecimal + "valores decimais");
         } else {
-            throw new InvalidFormatException("Nenhum valor foi formatada");
+            throw new InvalidFormatException("Nenhum valor foi formatado");
         }
     }
 
