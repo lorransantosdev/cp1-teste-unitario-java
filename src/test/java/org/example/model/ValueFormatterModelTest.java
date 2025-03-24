@@ -10,7 +10,7 @@ class ValueFormatterModelTest {
     void testDefaultConstructor() {
         ValueFormatterModel model = new ValueFormatterModel();
         assertEquals(0, model.getDecimalPlaces());
-        assertEquals('\0', model.getSeparatorType()); // Valor padrão de char é '\0'
+        assertEquals('\0', model.getSeparatorType());
         assertNull(model.getTypeSymbols());
     }
 
