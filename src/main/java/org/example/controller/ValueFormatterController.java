@@ -13,7 +13,7 @@ public class ValueFormatterController {
     public void startFormattingProcess() {
         int amountFormatDecimal = service.startProcessFormatting();
         if ((amountFormatDecimal > 0)) {
-            System.out.println("Foram formatados " + amountFormatDecimal + "valores decimais");
+            System.out.println("Foram formatados " + amountFormatDecimal + " valores decimais");
         } else {
             throw new InvalidFormatException("Nenhum valor foi formatado");
         }

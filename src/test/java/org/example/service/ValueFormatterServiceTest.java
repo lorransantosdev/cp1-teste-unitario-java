@@ -34,8 +34,6 @@ class ValueFormatterServiceTest {
 
     @Test
     void testStartProcessFormattingShouldReturnValidAmountWhenNoException() {
-        Scanner scannerMock = mock(Scanner.class);
-
         when(repository.getDecimalPlacesFromUser()).thenReturn(1);
         when(repository.getShowTypeSymbols()).thenReturn(Locale.US);
         when(repository.getSeparatorTypeFromUser()).thenReturn('.');
@@ -53,8 +51,6 @@ class ValueFormatterServiceTest {
 
     @Test
     void testProcessShouldReturnOneDecimalFormatWhenIsOk() {
-        Scanner scannerMock = mock(Scanner.class);
-
         when(repository.getDecimalPlacesFromUser()).thenReturn(1);
         when(repository.getShowTypeSymbols()).thenReturn(Locale.US);
         when(repository.getSeparatorTypeFromUser()).thenReturn('.');
@@ -65,8 +61,6 @@ class ValueFormatterServiceTest {
 
     @Test
     void testProcessShouldReturnTwoDecimalFormatWhenIsOk() {
-        Scanner scannerMock = mock(Scanner.class);
-
         when(repository.getDecimalPlacesFromUser()).thenReturn(2);
         when(repository.getShowTypeSymbols()).thenReturn(Locale.US);
         when(repository.getSeparatorTypeFromUser()).thenReturn(',');
@@ -85,16 +79,12 @@ class ValueFormatterServiceTest {
 
     @Test
     void testvalidPlacesShouldSucessfullyWhenReturnTwo() {
-        Scanner scannerMock = mock(Scanner.class);
-
         when(repository.getDecimalPlacesFromUser()).thenReturn(2);
         assertEquals(2, service.validPlaces());
     }
 
     @Test
     void testvalidPlacesShouldThrowNewExceptionWhenIsZero() {
-        Scanner scannerMock = mock(Scanner.class);
-
         when(repository.getDecimalPlacesFromUser()).thenReturn(0);
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
             service.validPlaces();
@@ -104,24 +94,18 @@ class ValueFormatterServiceTest {
 
     @Test
     void testvalidShowTypesShouldSucessfullyWhenReturnChar() {
-        Scanner scannerMock = mock(Scanner.class);
-
         when(repository.getSeparatorTypeFromUser()).thenReturn(',');
         assertEquals(',', service.validShowTypes());
     }
 
     @Test
     void testvalidShowTypesShouldSucessfullyWhenReturnChar1() {
-        Scanner scannerMock = mock(Scanner.class);
-
         when(repository.getSeparatorTypeFromUser()).thenReturn('.');
         assertEquals('.', service.validShowTypes());
     }
 
     @Test
     void testvalidShowTypesShouldThrowNewExceptionWhenCharNotEquals() {
-        Scanner scannerMock = mock(Scanner.class);
-
         when(repository.getSeparatorTypeFromUser()).thenReturn('a');
         InvalidInputException exception = assertThrows(InvalidInputException.class, () -> {
             service.validShowTypes();
